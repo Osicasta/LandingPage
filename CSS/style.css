@@ -28,3 +28,17 @@
 .box:nth-child(6) {
     grid-column-start: span 2;
 }
+
+@media(max-width:991px){
+    .container{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box:nth-child(1){
+        grid-column-start: span 2;
+    }
+    .box:nth-child(1){
+        grid-column-start: span 2;
+    }
+}
