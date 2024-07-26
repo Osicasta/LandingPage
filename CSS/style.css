@@ -1,8 +1,25 @@
-*{
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(205, 50, 50);
+    font-family: sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: rgb(193, 220, 20);
 }
 
 h2 {
@@ -80,6 +97,14 @@ h2 {
         padding: 30px;
     }
 
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
     .slider-frame {
         width: 100%;
     }
@@ -103,3 +128,11 @@ h2 {
     align-items: center;
 }
 
+header {
+    display: flex;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: brown;
+}
