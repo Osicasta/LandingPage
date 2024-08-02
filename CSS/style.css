@@ -17,8 +17,9 @@ header {
     height: 60px;
     background-color: rgb(56, 0, 0);
     z-index: 9;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
-
 .name {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
