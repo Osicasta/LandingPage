@@ -1,135 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Landin Page</title>
-	<link rel="stylesheet" href="CSS/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
+    <header>
+        <select id="language-switch">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
 
-	<header>
-		<select id="language-switch">
-			<option value="en">English</option>
-			<option value="es">Español</option>
-		</select>
-		
-		<h1 data-translate="welcome"></h1>
-		
-		<script src="script.js"></script>		
-		<div class="logo">
-			<h2 class="name">
-				BG Besto gamesy 2024
-			</h2>
-		</div>
-		<nav>
-			<a href="#slider" class="nav-link">Slider</a>
-			<a href="#gallery" class="nav-link">Image gallery</a>
-			<a href="form.html" class="nav-link">Form</a>
-			<a href="#contacto" class="nav-link">Contacts</a>
-		</nav>
-	</header>
+        <h1 data-translate="welcome"></h1>
 
-	<div class="redes">
-		<a href="https://wa.me/987654321?text=Best%20game%202024%" target="_blank">
-			<img class="boton" src="Assets/whatsapp-icon.png" alt="">
-		</a>
-	</div>
+        <div class="logo">
+            <h2 class="name" data-translate="logo-text">BG Besto juegos 2024</h2>
+        </div>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <a href="#slider" class="nav-link" data-translate="slider">Slider</a>
+            <a href="#gallery" class="nav-link" data-translate="image-gallery">Galería</a>
+            <a href="form.html" class="nav-link" data-translate="form">Formulario</a>
+            <a href="#contacto" class="nav-link" data-translate="contacts">Contáctanos</a>
+        </nav>
+    </header>
 
-	<h2 id="slider">Slider </h2>
+    <div class="redes">
+        <a href="https://wa.me/987654321?text=Best%20game%202024%" target="_blank">
+            <img class="boton" src="Assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
 
-	<div class="slider-frame">
-		<ul>
-			<li><img src="Assets/Elden.jpg" alt=""></li>
-			<li><img src="Assets/GTAv.jpg" alt=""></li>
-			<li><img src="Assets/RedDead.jpg" alt=""></li>
-			<li><img src="Assets/Thelast.jpg" alt=""></li>
-		</ul>
-	</div>
+    <h2 id="slider" data-translate="slider-title">Slider</h2>
 
-	<div class="text-slider">
-		<p>
-			On this page, you will find some of the best video games of the year 2024, <br>
-			whether it's for their gameplay, animations, performance, user experience, <br>
-			graphic quality, shadows, textures, etc. Nominated by the community. <br>
-	</div>
-	<div class="tittle-gallery" id="gallery">
-		<h1>Galeria de imagenes</h1>
-	</div>
-	<div class="container">
-		<div class="box">
-			<img src="Assets/Elden.jpg" alt="">
-		</div>
-		<div class="box">
-			<img src="Assets/GTAv.jpg" alt="">
-		</div>
-		<div class="box">
-			<img src="Assets/Half-life.jpg" alt="">
-		</div>
-		<div class="box">
-			<img src="Assets/LegendZelda.jpg" alt="">
-		</div>
-		<div class="box">
-			<img src="Assets/Persona5.jpg" alt="">
-		</div>
-		<div class="box">
-			<img src="Assets/RedDead.jpg" alt="">
-		</div>
-		<div class="box">
-			<img src="Assets/Thelast.jpg" alt="">
-		</div>
-	</div>
+    <div class="slider-frame">
+        <ul>
+            <li><img src="Assets/Elden.jpg" alt=""></li>
+            <li><img src="Assets/GTAv.jpg" alt=""></li>
+            <li><img src="Assets/RedDead.jpg" alt=""></li>
+            <li><img src="Assets/Thelast.jpg" alt=""></li>
+        </ul>
+    </div>
 
-	<div class="container-yt">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/S_OXuArbZNY?si=KunstB4qRkR8bh9E"
-			title="YouTube video player" frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-		</iframe>
-		<div class="text-box-yt">
-			<h1>Video</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-				Obcaecati molestiae nam reprehenderit minus veniam expedita?<br>
-				Iusto sint, incidunt vel nesciunt, eveniet tempora facere <br>
-				magni ab ducimus unde dignissimos, officia aliquid. Lorem <br>
-				ipsum dolor, sit amet consectetur adipisicing elit. Doloribus <br>
-				illum ea quasi recusandae amet nostrum nemo ducimus vel omnis <br>
-				assumenda dolorum isteut quia eveniet pariatur exercitationem <br>
-				odit, hic fugiat. <br>
-			</p>
-		</div>
-	</div>
+    <div class="text-slider" data-translate="text-slider">
+        <p>
+            En esta página encontrarás algunos de los mejores juegos disponibles para jugar en 2024, ya sea por su jugabilidad, diseño, texturas, etc. Fueron nominados por la comunidad.
+        </p>
+    </div>
+    
+    <div class="title-gallery" id="gallery">
+        <h1 data-translate="gallery-title">Galería</h1>
+    </div>
+    
+    <div class="container">
+        <div class="box">
+            <img src="Assets/Elden.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="Assets/GTAv.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="Assets/Half-life.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="Assets/LegendZelda.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="Assets/Persona5.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="Assets/RedDead.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="Assets/Thelast.jpg" alt="">
+        </div>
+    </div>
 
-	<footer class="footer">
-		<div class="container-footer">
-			<div class="footer-row">
-				<div class="footer-links">
+    <div class="container-yt">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/S_OXuArbZNY?si=KunstB4qRkR8bh9E"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <div class="text-box-yt">
+            <h1 data-translate="video-title">Video</h1>
+            <p data-translate="video-description">Lorem ipsum dolor
+            </p>
+        </div>
+    </div>
 
-					<h4>Information</h4>
-					<ul>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Privacy policy</a></li>
-					</ul>
-					
-				</div>
-				<div class="footer-links" id="contacto">
-					<h4>Follow us</h4>
-					<div class="social-link">
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-						<a href="#"><i class="fab fa-twitter"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
+    <script src="script.js"></script>
 
-				</div>
-				</div>
-			</div>
-		</div>
-	</footer>
 
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4 data-translate="information">Information</h4>
+                    <ul>
+                        <li><a href="#" data-translate="about-us">Sobre nosotros</a></li>
+                        <li><a href="#" data-translate="contact-us">Contactanos</a></li>
+                        <li><a href="#" data-translate="privacy-policy">Politica de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links" id="contacto">
+                    <h4 data-translate="follow-us">Siguenos</h4>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
