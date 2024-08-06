@@ -1,3 +1,8 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -7,41 +12,50 @@ body{
     background: linear-gradient(to right, #111111, #a10000);
 }
 
-header {
+header{
     position: sticky;
-    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #620000;
     display: flex;
-    font-size: 25px;
-    min-height: 7px;
-    justify-content: space-between;
     align-items: center;
-    height: 60px;
-    background-color: rgb(56, 0, 0);
-    z-index: 9;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
-.name {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    margin-left: 30px;
-    margin-top: 20px;
+    justify-content: space-between;
+    padding: 0 0px;
+    z-index: 2;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: all .3 ease;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
 }
 
-nav a {
-    font-weight: 100;
-    font-size: 20px;
-    padding-right: 30px;
+.bars {
+    display: none;
 }
 
-nav a:hover {
-    color: rgb(245, 65, 0);
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    color: #620000;
+    background-color: #ffe00e;
+}
+
+.nav-bar ul li a.active {
+    color: #620000;
+    background-color: #ffe00e;
 }
 
 .redes{
@@ -236,11 +250,52 @@ h2 {
     }
 
     header {
-        flex-direction: column;
+        padding: 0px 30px;
     }
 
-    nav {
-        padding: 10px 0;
+    .bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bars .line {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0px;
+    }
+
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #620000;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 450px;
+    }
+
+    .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar.active ul li a {
+        margin-bottom: 20px;
     }
 
     .slider-frame {
@@ -305,6 +360,7 @@ h2 {
     background-color: rgb(56, 0, 0);
     padding: 120px 0;
     height: 95px;
+    list-style: none;
 }
 
 .footer-row {
@@ -315,6 +371,10 @@ h2 {
 .footer-links {
     width: 45%;
     padding: 0 15px;
+}
+
+.footer-links ul li {
+    list-style: none;
 }
 
 .footer-links h4 {
@@ -334,6 +394,7 @@ h2 {
     color: white;
     margin-bottom: 15px;
     transition: all .3 ease;
+
 }
 
 .footer-links ul li a:hover {

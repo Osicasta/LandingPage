@@ -3,11 +3,13 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background: linear-gradient(to right, #111111, #ffffff);
+    background: linear-gradient(to right, #111111, #a10000);
 }
 
 .form {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px;
+    width: 1800px;
 }
