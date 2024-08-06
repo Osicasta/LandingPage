@@ -3,7 +3,8 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background: linear-gradient(to right, #111111, #ffffff);
+    color: white;
+    background: linear-gradient(to right, #111111, #a10000);
 }
 
 header {
@@ -70,7 +71,9 @@ h2 {
 }
 
 .tittle-gallery {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider-frame {
@@ -97,6 +100,14 @@ h2 {
     width: 100%;
 }
 
+.text-slider {
+    text-align: center;
+    font-size:30px;
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 @keyframes slide {
     0% {margin-left: 0%;}
     20% {margin-left: 0%;}
@@ -118,8 +129,83 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px;
     grid-gap: 20px;
-    padding: 100px 0;
+    padding: 80px 0;
 }
+
+.selector-img {
+    text-align: center;
+}
+
+.container-open {
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(48, 48, 48, 0.451),rgba(66, 0, 0, 0.778)),
+    url(/Assets/Half-life.jpg);
+    background-size: cover;
+
+}
+
+.container-open .image-container-open {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container-open .image-container-open .image-open {
+    height: 250px;
+    width: 350px;
+    border: 10px solid #620000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container-open .image-container-open .image-open img{
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container-open .image-container-open .image-open:hover img{
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container-open .popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container-open .popup-image span {
+    position: absolute;
+    top:0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container-open .popup-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #620000;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
 
 .gradient1 {
     background: linear-gradient(to right, #5fcfff, #773ad8); /* Degradado de dos colores */
@@ -166,6 +252,11 @@ h2 {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    
+    .container-open .popup-image img{
+        width: 95%;
+    }
+
     .box:nth-child(1){
         grid-column-start: span 2;
     }
@@ -184,35 +275,21 @@ h2 {
 
 }
 
-.form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-slider {
-    text-align: center;
-    font-size:30px;
-
-}
-
 .text-box-yt {
-    font-size: 20px;
-    margin-right: 30px;
+    font-size:20px;
+    display: grid;
+    margin: 0 auto;
 }
 
 .container-yt {
+    padding: 50px;
     position: relative;
     overflow: hidden;
-    width:1270px;
-    height:400px;
+    width:1180px;
+    height:350px;
     margin:0 auto;
     display:flex;
     justify-content: center;
-}
-
-iframe {
-    margin-right: 40px;
 }
 
 .container-footer {

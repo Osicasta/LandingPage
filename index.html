@@ -19,7 +19,7 @@
         <h1 data-translate="welcome"></h1>
 
         <div class="logo">
-            <h2 class="name" data-translate="logo-text">BG Besto juegos 2024</h2>
+            <h2 class="name" data-translate="logo-text">BJ Besto juegos 2024</h2>
         </div>
         <div class="menu-icon">
             <i class="fas fa-bars"></i>
@@ -55,8 +55,8 @@
         </p>
     </div>
     
-    <div class="title-gallery" id="gallery">
-        <h1 data-translate="gallery-title">Galería</h1>
+    <div class="tittle-gallery" id="gallery">
+        <h1 data-translate="gallery-title">Galeria</h1>
     </div>
     
     <div class="container">
@@ -83,6 +83,41 @@
         </div>
     </div>
 
+    <div class="selector-img">
+        <h1>Selector de imagenes
+        </h1>
+    </div>
+
+    <div class="container-open">
+        <div class="image-container-open">
+            <div class="image-open"><img src="Assets/Elden.jpg" alt=""></div>
+            <div class="image-open"><img src="Assets/GTAv.jpg" alt=""></div>
+            <div class="image-open"><img src="Assets/Half-life.jpg" alt=""></div>
+            <div class="image-open"><img src="Assets/Thelast.jpg" alt=""></div>
+            <div class="image-open"><img src="Assets/Persona5.jpg" alt=""></div>
+            <div class="image-open"><img src="Assets/RedDead.jpg" alt=""></div>
+
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="Assets/Elden.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container-open img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
     <div class="container-yt">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/S_OXuArbZNY?si=KunstB4qRkR8bh9E"
             title="YouTube video player" frameborder="0"
@@ -91,7 +126,17 @@
         </iframe>
         <div class="text-box-yt">
             <h1 data-translate="video-title">Video</h1>
-            <p data-translate="video-description">Lorem ipsum dolor
+            <p data-translate="video-description">
+                Hoy tenemos un video muy especial para ustedes. <br>
+                Vamos a adentrarnos en el emocionante mundo de los <br>
+                videojuegos y descubrir cuáles son los mejores <br>
+                títulos de 2024. Este año ha estado repleto de <br>
+                lanzamientos innovadores y aventuras inolvidables <br>
+                que nos han mantenido pegados a nuestras pantallas. <br>
+                Desde impresionantes gráficos de última generación <br>
+                hasta historias cautivadoras y mecánicas de juego <br>
+                revolucionarias, estos juegos han elevado el estándar <br>
+                de la industria.  <br>  
             </p>
         </div>
     </div>
@@ -124,4 +169,3 @@
     </footer>
 </body>
 </html>
-#deberia funcionar
