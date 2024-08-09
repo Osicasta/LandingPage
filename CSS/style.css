@@ -74,6 +74,40 @@ header{
     transition: 0.3s;
 }
 
+header .boton-en {
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    transition: .3s linear;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+    background-color: #ffe00e;
+    color: #620000;
+}
+
+header .boton-en:hover {
+    background-color: #ff6666;
+    box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666, 0 0;
+}
+
+header .boton-es {
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    transition: .3s linear;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+    background-color: #ffe00e;
+    color: #620000;
+}
+
+header .boton-es:hover {
+    background-color: #ff6666;
+    box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666, 0 0;
+}
+
 .boton {
     width: 65px;
     transition: ease 1s;
