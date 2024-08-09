@@ -308,21 +308,8 @@ h2 {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .container-yt{
-        margin: 0 10px;
-        padding: 10px;
-    }
 
-    iframe {
-        width: 350px;
-    }
 
-    .text-box-yt {
-        margin: 0 10px;
-        width: 70%;
-    
-    }
-    
     .container-open .popup-image img{
         width: 95%;
     }
@@ -345,21 +332,21 @@ h2 {
 
 }
 
-.text-box-yt {
-    font-size:20px;
-    display: grid;
-    margin: 0 auto;
+.container-yt {
+    margin: 150px auto;
+    width: 70%;
 }
 
-.container-yt {
-    padding: 50px;
-    position: relative;
-    overflow: hidden;
-    width:1180px;
-    height:350px;
-    margin:0 auto;
-    display:flex;
-    justify-content: center;
+iframe {
+    max-width: 380px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.text-box-yt h1 {
+    font-size: 42px;
 }
 
 .container-footer {
