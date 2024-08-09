@@ -309,7 +309,18 @@ h2 {
     }
 
     .container-yt{
-        padding: 30px;
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    iframe {
+        width: 350px;
+    }
+
+    .text-box-yt {
+        margin: 0 10px;
+        width: 70%;
+    
     }
     
     .container-open .popup-image img{
