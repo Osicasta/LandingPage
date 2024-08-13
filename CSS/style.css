@@ -7,7 +7,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Audiowide", sans-serif;
+    font-family: "Trirong", serif;
     color: white;
     background: linear-gradient(to right, #111111, #a10000);
 }
@@ -395,7 +395,7 @@ iframe {
 .footer {
     background-color: rgb(56, 0, 0);
     padding: 120px 0;
-    height: 95px;
+    height: 135px;
     list-style: none;
 }
 
