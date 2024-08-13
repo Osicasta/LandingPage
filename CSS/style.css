@@ -383,6 +383,10 @@ iframe {
     font-size: 45px;
 }
 
+.text-box-yt p {
+    font-size: 22px;
+}
+
 .container-footer {
     padding-right: 100px;
     max-width: 1200px;
