@@ -2,7 +2,7 @@
     list-style: none;
     text-decoration: none;
 }
-/* Estilos para el botón de cambio de idioma */
+
 .language-toggle {
     background: none;
     border: none;
@@ -10,12 +10,12 @@
     cursor: pointer;
     position: fixed;
     top: 200px;
-    right: 20px; /* Mueve el botón a la derecha */
+    right: 20px; 
     z-index: 1000;
 }
 
 .language-toggle img {
-    width: 60px; /* Tamaño aumentado de la imagen */
+    width: 60px; 
     height: 60px;
 }
 .dark-mode-toggle {
@@ -25,12 +25,12 @@
     cursor: pointer;
     position: fixed;
     top: 100px;
-    right: 20px; /* Mueve el botón a la derecha */
+    right: 20px; 
     z-index: 1000;
 }
 
 .dark-mode-toggle img {
-    width: 60px; /* Tamaño aumentado de la imagen */
+    width: 60px; 
     height: 60px;
 }
 
@@ -40,12 +40,7 @@
     100% { opacity: 0; }
 }
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Trirong", serif;
-    color: white;
-    background: linear-gradient(to right, #111111, #a10000);
+background-color: #800101;
 }
 
 header{
@@ -527,6 +522,9 @@ iframe {
     background-color: #1f1f1f;
 }
 
+.dark-mode body{
+    background: linear-gradient(to right, #000000, #303030);
+}
 
 .dark-mode .nav-bar a {
     color: #e0e0e0;
@@ -547,9 +545,4 @@ iframe {
 .dark-mode .container-open {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(/Assets/wall.jpg);
-}
-
-.dark-mode body {
-    color: #e0e0e0;
-    background: linear-gradient(to right, #000000, #4e4e4e);
 }
