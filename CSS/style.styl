@@ -1,0 +1,395 @@
+*
+  list-style: none
+  text-decoration: none
+
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Trirong", serif
+  color: white
+  background: linear-gradient(to right, #111111, #a10000)
+
+header
+  position: sticky
+  width: 100%
+  height: 80px
+  background-color: #620000
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 0px
+  z-index: 2
+  border-radius: 8px
+
+.logo
+  font-size: 28px
+  font-weight: bold
+  color: #fff
+
+.bars
+  display: none
+
+.nav-bar ul
+  display: flex
+
+.nav-bar ul li a
+  display: block
+  color: #fff
+  font-size: 18px
+  padding: 10px 25px
+  border-radius: 15px
+  transition: 0.2s
+  margin: 0 5px
+
+.nav-bar ul li a:hover
+  color: #620000
+  background-color: #ffe00e
+
+.nav-bar ul li a.active
+  color: #620000
+  background-color: #ffe00e
+
+.redes
+  position: fixed
+  z-index: 999
+  border-radius: 50%
+  bottom: 20px
+  right: 25px
+  padding: 25px
+  transition: ease 0.3s
+
+.redes:hover
+  transform: scale(1.1)
+  transition: 0.3s
+
+header .boton-en
+  position: relative
+  border: none
+  border-radius: 8px
+  height: 30px
+  transition: .3s linear
+  cursor: pointer
+  font-family: "Audiowide", sans-serif
+  background-color: #ffe00e
+  color: #620000
+
+header .boton-en:hover
+  background-color: #ff6666
+  box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666, 0 0
+
+header .boton-es
+  position: relative
+  border: none
+  border-radius: 8px
+  height: 30px
+  transition: .3s linear
+  cursor: pointer
+  font-family: "Audiowide", sans-serif
+  background-color: #ffe00e
+  color: #620000
+
+header .boton-es:hover
+  background-color: #ff6666
+  box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666, 0 0
+
+.boton
+  width: 65px
+  transition: ease 1s
+
+h2
+  text-align: center
+  margin-top: 50px
+  font-size: 2rem
+
+.tittle-gallery
+  display: flex
+  justify-content: center
+  align-items: center
+
+.slider-frame
+  width: 1280px
+  height: auto
+  margin: 50px auto 0
+  overflow: hidden
+
+.slider-frame ul
+  display: flex
+  padding: 0
+  width: 400%
+  animation: slide 16s infinite alternate ease-in-out
+
+.slider-frame li
+  list-style: none
+  width: 100%
+  position: relative
+
+.slider-frame img
+  width: 100%
+
+.text-slider
+  text-align: center
+  font-size: 30px
+  display: grid
+  max-width: 1200px
+  margin: 0 auto
+
+@keyframes slide
+  0%
+    margin-left: 0%
+  20%
+    margin-left: 0%
+  25%
+    margin-left: -100%
+  45%
+    margin-left: -100%
+  50%
+    margin-left: -200%
+  70%
+    margin-left: -200%
+  75%
+    margin-left: -300%
+  100%
+    margin-left: -300%
+.container
+  max-width: 1200px
+  margin: 0 auto
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: 250px
+  grid-gap: 20px
+  padding: 80px 0
+
+.selector-img
+  text-align: center
+
+.container-open
+  position: relative
+  min-height: 100vh
+  background-image: linear-gradient(rgba(48, 48, 48, 0.451),rgba(66, 0, 0, 0.778)),
+    url(/Assets/Half-life.jpg)
+  background-size: cover
+
+.container-open .image-container-open
+  display: flex
+  flex-wrap: wrap
+  gap: 15px
+  justify-content: center
+  padding: 10px
+
+.container-open .image-container-open .image-open
+  height: 250px
+  width: 350px
+  border: 10px solid #620000
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+  overflow: hidden
+  cursor: pointer
+
+.container-open .image-container-open .image-open img
+  height: 250px
+  width: 350px
+  object-fit: cover
+  transition: .2s linear
+
+.container-open .image-container-open .image-open:hover img
+  height: 250px
+  width: 350px
+  object-fit: cover
+  transition: .2s linear
+
+.container-open .popup-image
+  position: fixed
+  top: 0
+  left: 0
+  background-color: rgba(0, 0, 0, .9)
+  height: 100%
+  width: 100%
+  z-index: 100
+  display: none
+
+.container-open .popup-image span
+  position: absolute
+  top: 0
+  right: 10px
+  font-size: 60px
+  font-weight: bolder
+  color: #fff
+  cursor: pointer
+  z-index: 100
+
+.container-open .popup-image img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  border: 5px solid #620000
+  border-radius: 5px
+  width: 750px
+  object-fit: cover
+
+.gradient1
+  background: linear-gradient(to right, #5fcfff, #773ad8)
+  /* Degradado de dos colores */
+
+.gradient2
+  background: linear-gradient(to right, #6a11cb, #257ffc)
+  /* Otro degradado de dos colores */
+
+.box img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.box:nth-child(1)
+  grid-column-start: span 2
+
+.box:nth-child(6)
+  grid-column-start: span 2
+
+@media (max-width:991px)
+  body
+    padding: 30px
+
+  header
+    position: sticky
+    padding: 0px 10px
+
+  .bars
+    display: block
+    cursor: pointer
+
+  .bars .line
+    width: 30px
+    height: 3px
+    background-color: #fff
+    margin: 6px 0px
+
+  .nav-bar
+    height: 0px
+    position: absolute
+    top: 80px
+    left: 0
+    right: 0
+    width: 100%
+    background-color: #620000
+    transition: 0.5s
+    overflow: hidden
+
+  .nav-bar.active
+    height: 450px
+
+  .nav-bar ul
+    display: block
+    width: fit-content
+    margin: 80px auto 0 auto
+    text-align: center
+    transition: 0.5s
+    opacity: 0
+
+  .nav-bar.active ul
+    opacity: 1
+
+  .nav-bar.active ul li a
+    margin-bottom: 20px
+
+  .slider-frame
+    width: 100%
+
+  .container
+    padding: 30px
+    grid-template-columns: repeat(1, 1fr)
+
+  .container-open .popup-image img
+    width: 95%
+
+  .box:nth-child(1)
+    grid-column-start: span 2
+
+  .box:nth-child(1)
+    grid-column-start: span 2
+
+  .footer-row
+    text-align: center
+
+  .footer-links
+    width: 100%
+    margin-bottom: 30px
+
+.container-yt
+  margin: 150px auto
+  width: 70%
+
+iframe
+  max-width: 380px
+  float: left
+  border: 3px solid #fff
+  border-radius: 10px
+  margin-right: 25px
+
+.text-box-yt h1
+  font-size: 45px
+
+.text-box-yt p
+  font-size: 22px
+
+.container-footer
+  padding-right: 100px
+  max-width: 1200px
+  margin: 0 auto
+  text-align: center
+  list-style: none
+  padding: 0
+
+.footer
+  background-color: rgb(56, 0, 0)
+  padding: 120px 0
+  height: 135px
+  list-style: none
+
+.footer-row
+  display: flex
+  flex-wrap: wrap
+
+.footer-links
+  width: 45%
+  padding: 0 15px
+
+.footer-links ul li
+  list-style: none
+
+.footer-links h4
+  font-size: 20px
+  color: white
+  margin-bottom: 25px
+  font-weight: 500
+  border-bottom: 2px solid rgb(255, 30, 30)
+  padding-bottom: 10px
+  display: inline-block
+
+.footer-links ul li a
+  font-size: 18px
+  text-decoration: none
+  display: block
+  color: white
+  margin-bottom: 15px
+  transition: all .3 ease
+
+.footer-links ul li a:hover
+  color: rgb(245, 65, 0)
+  padding-left: 6px
+
+.social-link a
+  display: inline-block
+  min-height: 40px
+  width: 40px
+  background-color: rgb(255, 255, 255, 0.2)
+  margin: 0 10px 10px 0
+  text-align: center
+  line-height: 40px
+  border-radius: 50%
+  color: white
+  transition: all .5 ease
+
+.social-link a:hover
+  background-color: rgb(245, 65, 0)
+

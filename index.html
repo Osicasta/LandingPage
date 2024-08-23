@@ -1,180 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="title">Landing Page</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Login - BJ Besto Juegos</title>
+    <link rel="stylesheet" href="CSS/login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-    <link rel="alternate machine-translated-from" hreflang="es"
-            href="http://fr.example.com/abeille.html">
 </head>
-
 <body>
-    <header>
-
-        <div class="logo">BJ Besto Juegos</div>
-        <button class="boton-en" id="btn-en">English</button>
-        <button class="boton-es" id="btn-es">Español</button>
-        <div class="bars">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-
-        <nav class="nav-bar">
-            <ul>
-                <li>
-                    <a href="#slider" class="active">Slider</a>
-                </li>
-                <li>
-                    <a href="#gallery">Galeria</a>
-                </li>
-                <li>
-                    <a href="form.html">Formulario</a>
-                </li>
-                <li>
-                    <a href="#video">Video</a>
-                </li>
-                <li>
-                    <a href="#contacto">Contactanos</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <h1 data-translate="welcome"></h1>
-    <div class="redes">
-        <a href="https://wa.me/987654321?text=Best%20game%202024%" target="_blank">
-            <img class="boton" src="Assets/whatsapp-icon.png" alt="WhatsApp">
-        </a>
-    </div>
-
-    <h2 id="slider" data-translate="slider-title">Slider</h2>
-
-    <div class="slider-frame">
-        <ul>
-            <li><img src="Assets/Elden.jpg" alt=""></li>
-            <li><img src="Assets/GTAv.jpg" alt=""></li>
-            <li><img src="Assets/RedDead.jpg" alt=""></li>
-            <li><img src="Assets/Thelast.jpg" alt=""></li>
-        </ul>
-    </div>
-
-    <div class="text-slider" data-translate="text-slider">
-        <p>
-            En esta página encontrarás algunos de los mejores juegos disponibles para jugar en 2024, ya sea por su jugabilidad, diseño, texturas, etc. Fueron nominados por la comunidad.
-        </p>
-    </div>
-    
-    <div class="tittle-gallery" id="gallery">
-        <h1 data-translate="gallery-title">Galeria</h1>
-    </div>
-    
-    <div class="container">
-        <div class="box">
-            <img src="Assets/Elden.jpg" alt="">
-        </div>
-        <div class="box">
-            <img src="Assets/GTAv.jpg" alt="">
-        </div>
-        <div class="box">
-            <img src="Assets/Half-life.jpg" alt="">
-        </div>
-        <div class="box">
-            <img src="Assets/LegendZelda.jpg" alt="">
-        </div>
-        <div class="box">
-            <img src="Assets/Persona5.jpg" alt="">
-        </div>
-        <div class="box">
-            <img src="Assets/RedDead.jpg" alt="">
-        </div>
-        <div class="box">
-            <img src="Assets/Thelast.jpg" alt="">
+    <body style="background: url('Assets/back.png') no-repeat center center fixed; background-size: cover;"></body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Clave</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Ingresar</button>
+                <a href="regist.html" class="register-link">Registrarse</a>
+            </form>
+            <p id="mensajeError" style="color: #ff0000; display: none; margin-top: 20px;">Usuario o clave incorrectos. Inténtelo de nuevo.</p>
         </div>
     </div>
-
-    <div class="selector-img" id="selector">
-        <h1>Selector de imagenes
-        </h1>
-    </div>
-
-    <div class="container-open">
-        <div class="image-container-open">
-            <div class="image-open"><img src="Assets/Elden.jpg" alt=""></div>
-            <div class="image-open"><img src="Assets/GTAv.jpg" alt=""></div>
-            <div class="image-open"><img src="Assets/Half-life.jpg" alt=""></div>
-            <div class="image-open"><img src="Assets/Thelast.jpg" alt=""></div>
-            <div class="image-open"><img src="Assets/Persona5.jpg" alt=""></div>
-            <div class="image-open"><img src="Assets/RedDead.jpg" alt=""></div>
-
-        </div>
-
-        <div class="popup-image">
-            <span>&times;</span>
-            <img src="Assets/Elden.jpg" alt="">
-        </div>
-    </div>
-
     <script>
-        document.querySelectorAll('.image-container-open img').forEach(image =>{
-            image.onclick = () =>{
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').src = image.getAttribute('src');
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const storedUsername = localStorage.getItem('nombre');
+            const storedPassword = localStorage.getItem('contrasena');
+            if (username === storedUsername && password === storedPassword) {
+                window.location.href = 'main.html';
+            } else {
+                const mensajeError = document.getElementById('mensajeError');
+                mensajeError.style.display = 'block';
             }
         });
-
-        document.querySelector('.popup-image span').onclick = () =>{
-            document.querySelector('.popup-image').style.display = 'none';
-        }
     </script>
-
-    <div class="container-yt" id="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/S_OXuArbZNY?si=RZza6dhl8DOKQqML" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="text-box-yt">
-            <h1 data-translate="video-title">Video</h1>
-            <p data-translate="video-description">
-                Hoy tenemos un video muy especial para ustedes. 
-                Vamos a adentrarnos en el emocionante mundo de los 
-                videojuegos y descubrir cuáles son los mejores 
-                títulos de 2024. Este año ha estado repleto de 
-                lanzamientos innovadores y aventuras inolvidables 
-                que nos han mantenido pegados a nuestras pantallas. 
-
-            </p>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4 data-translate="information">Información</h4>
-                    <ul>
-                        <li><a href="#" data-translate="about-us">Sobre nosotros</a></li>
-                        <li><a href="#" data-translate="contact-us">Contactanos</a></li>
-                        <li><a href="#" data-translate="privacy-policy">Politica de privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links" id="contacto">
-                    <h4 data-translate="follow-us">Siguenos</h4>
-                    <div class="social-link">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/node-polyglot/build/polyglot.min.js"></script>
-    <script src="/js/script.js"></script>
-
 </body>
 </html>

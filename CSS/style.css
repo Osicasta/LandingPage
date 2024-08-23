@@ -2,7 +2,43 @@
     list-style: none;
     text-decoration: none;
 }
+/* Estilos para el botón de cambio de idioma */
+.language-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: fixed;
+    top: 200px;
+    right: 20px; /* Mueve el botón a la derecha */
+    z-index: 1000;
+}
 
+.language-toggle img {
+    width: 60px; /* Tamaño aumentado de la imagen */
+    height: 60px;
+}
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: fixed;
+    top: 100px;
+    right: 20px; /* Mueve el botón a la derecha */
+    z-index: 1000;
+}
+
+.dark-mode-toggle img {
+    width: 60px; /* Tamaño aumentado de la imagen */
+    height: 60px;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
 body{
     margin: 0;
     padding: 0;
@@ -107,6 +143,28 @@ header .boton-es:hover {
     background-color: #ff6666;
     box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666, 0 0;
 }
+
+.nav-bar ul li .logout-button {
+    background-color: #620000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px 5px;
+}
+
+.nav-bar ul li .logout-button:hover {
+    background-color: #ffe00e;
+    color: #620000;
+}
+
+.nav-bar ul li .logout-button:focus {
+    outline: none;
+}
+
 
 .boton {
     width: 65px;
@@ -458,4 +516,40 @@ iframe {
 
 .social-link a:hover {
     background-color: rgb(245, 65, 0);
+}
+
+.dark-mode {
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+
+.dark-mode .nav-bar a {
+    color: #e0e0e0;
+}
+
+
+.dark-mode .footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+
+.dark-mode .boton, .dark-mode .logout-button, .dark-mode .dark-mode-toggle {
+    
+    color: #e0e0e0;
+}
+
+.dark-mode .container-open {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/Assets/wall.jpg);
+}
+
+.dark-mode body {
+    color: #e0e0e0;
+    background: linear-gradient(to right, #000000, #4e4e4e);
 }
