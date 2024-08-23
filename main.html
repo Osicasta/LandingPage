@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="alternate machine-translated-from" hreflang="es"
         href="http://fr.example.com/abeille.html">
+        <script type="module" src="/js/locale/idioma.js"></script>
 </head>
 
 <body>
     
     <header>
-        <div class="logo">BJ Besto Juegos</div>
+        <div class="logo" id="besto_titulo">BJ Besto Juegos</div>
         <button class="language-toggle" id="languageToggle">
             <img src="Assets/lg.png" alt="Cambiar Idioma">
         </button>
@@ -28,27 +29,29 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-
+        <a href="javascript:void(0);" idioma="en" id="btn_en">EN</a>
+        <a href="javascript:void(0);" idioma="es" id="btn_es">ES</a>
         <nav class="nav-bar">
+
             <ul>
                 <li><a href="#slider" class="active">Slider</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="form.html">Formulario</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
-                <li><button id="logoutButton" class="logout-button">Cerrar Sesión</button></li>
+                <li><a href="#gallery" id="besto_menu_1">Galería</a></li>
+                <li><a href="form.html" id="besto_menu_2">Formulario</a></li>
+                <li><a href="#video" id="besto_menu_3">Video</a></li>
+                <li><a href="#contacto" id="besto_menu_4">Contáctanos</a></li>
+                <li><button id="logoutButton" class="logout-button" id="besto_menu_5">Cerrar Sesión</button></li>
             </ul>
         </nav>
     </header>
 
-    <h1 data-translate="welcome"></h1>
+    <h1></h1>
     <div class="redes">
         <a href="https://wa.me/987654321?text=Best%20game%202024%" target="_blank">
             <img class="boton" src="Assets/whatsapp-icon.png" alt="WhatsApp">
         </a>
     </div>
 
-    <h2 id="slider" data-translate="slider-title">Slider</h2>
+    <h2 id="slider">Slider</h2>
 
     <div class="slider-frame">
         <ul>
@@ -59,14 +62,14 @@
         </ul>
     </div>
 
-    <div class="text-slider" data-translate="text-slider">
-        <p>
+    <div class="text-slider" >
+        <p id="besto_parrafo_slider">
             En esta página encontrarás algunos de los mejores juegos disponibles para jugar en 2024, ya sea por su jugabilidad, diseño, texturas, etc. Fueron nominados por la comunidad.
         </p>
     </div>
 
     <div class="tittle-gallery" id="gallery">
-        <h1 data-translate="gallery-title">Galería</h1>
+        <h1 id="besto_titulo_galeria">Galería</h1>
     </div>
 
     <div class="container">
@@ -94,7 +97,7 @@
     </div>
 
     <div class="selector-img" id="selector">
-        <h1>Selector de imágenes</h1>
+        <h1 id="besto_titulo_selector">Selector de imágenes</h1>
     </div>
 
     <div class="container-open">
@@ -128,8 +131,8 @@
     <div class="container-yt" id="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/S_OXuArbZNY?si=RZza6dhl8DOKQqML" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="text-box-yt">
-            <h1 data-translate="video-title">Video</h1>
-            <p data-translate="video-description">
+            <h1>Video</h1>
+            <p id="besto_parrafo_youtube">
                 Hoy tenemos un video muy especial para ustedes. Vamos a adentrarnos en el emocionante mundo de los videojuegos y descubrir cuáles son los mejores títulos de 2024. Este año ha estado repleto de lanzamientos innovadores y aventuras inolvidables que nos han mantenido pegados a nuestras pantallas.
             </p>
         </div>
@@ -138,15 +141,15 @@
         <div class="container-footer">
             <div class="footer-row">
                 <div class="footer-links">
-                    <h4 data-translate="information">Información</h4>
+                    <h4 id="besto_informacion">Información</h4>
                     <ul>
-                        <li><a href="#" data-translate="about-us">Sobre nosotros</a></li>
-                        <li><a href="#" data-translate="contact-us">Contáctanos</a></li>
-                        <li><a href="#" data-translate="privacy-policy">Política de privacidad</a></li>
+                        <li><a href="#" id="besto_link_nosotros">Sobre nosotros</a></li>
+                        <li><a href="#" id="besto_link_contactanos">Contáctanos</a></li>
+                        <li><a href="#" id="besto_link_politica">Política de privacidad</a></li>
                     </ul>
                 </div>
                 <div class="footer-links" id="contacto">
-                    <h4 data-translate="follow-us">Síguenos</h4>
+                    <h4 id="besto_titulo_siguenos">Síguenos</h4>
                     <div class="social-link">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>

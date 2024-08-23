@@ -1,4 +1,10 @@
 {
+  "name": "landing-page",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node LandingPage/main.html", 
+    "build": "node LandingPage/main.html"
+  },
   "dependencies": {
     "node-polyglot": "^2.6.0",
     "react": "^18.3.1",
