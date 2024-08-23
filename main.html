@@ -111,6 +111,18 @@
             <span>&times;</span>
             <img src="Assets/Elden.jpg" alt="">
         </div>
+        <script>
+            document.querySelectorAll('.image-container-open img').forEach(image =>{
+                image.onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+    
+            document.querySelector('.popup-image span').onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+        </script>
     </div>
 
     <div class="container-yt" id="video">
