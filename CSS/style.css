@@ -537,7 +537,7 @@ iframe {
 }
 
 
-.dark-mode .boton, .dark-mode .logout-button, .dark-mode .dark-mode-toggle {
+.dark-mode .boton, .dark-mode .logout-button, .dark-mode .dark-mode-toggle{
     
     color: #e0e0e0;
 }
@@ -546,3 +546,5 @@ iframe {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(/Assets/wall.jpg);
 }
+
+
