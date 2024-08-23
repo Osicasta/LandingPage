@@ -11,7 +11,8 @@ Elaboración del taller #1 de la materia plataformas de programación empresaria
 import * as React from 'react'
 import * as Server from 'react-dom/server'
 
-let Greet = () => <h1>Hello, world!</h1>
+//let Greet = () => <h1>Hello, world!</h1>
 console.log(Server.renderToString(<Greet />))
 6. Luego colocar la salida del archivo para cuando se ejecute: .\node_modules\.bin\esbuild app.jsx --bundle --outfile=out.js
+
 
